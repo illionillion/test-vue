@@ -1,15 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <!-- <img alt="Vue logo" src="./assets/logo.png" onclick="alert('OK')"> -->
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HelloVue msg="Hello Vue"/>
+  <!-- <Count/> -->
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import HelloVue from './components/HelloVue.vue';
+// import Count from './components/Count.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    HelloVue,
+    // Count
   }
 }
 </script>
