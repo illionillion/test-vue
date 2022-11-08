@@ -1,30 +1,30 @@
-<!-- <template>
-    <div class="count-number">{{count}}</div>
-    <input type="button" id="countBtn" value="+" @click="clickCount()">
+<template>
+    <div id="count-app">
+        <div class="count-number">{{count}}</div>
+        <input type="button" value="+" @click="clickCountUp">
+        <input type="button" value="-" @click="clickCountDown">
+        <p v-if="count === 0">click count up!!</p>
+    </div>
 </template>
 
 <script>
     export default {
-        name: 'Count',
-        data: {
-            count:0
+        name: 'CountApp',
+        data() {
+            return {
+                count: 0
+            }
         },
-        // props: {
-        //     count: 0
-        // }
         methods: {
-            clickCount() {
-                this.data.count++
+            clickCountUp: function() {
+                this.count++
+            },
+            clickCountDown: function() {
+                if (this.count > 0) {
+                    this.count--
+                }
             }
         }
     }
 
-    // let count = 0
-
-    // const clickCount = () => {
-        
-    //     count++
-    // }
-
-    // document.getElementById('countBtn').addEventListener('click', clickCount)
-</script> -->
+</script>
